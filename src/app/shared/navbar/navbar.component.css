@@ -1,0 +1,31 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+span:focus {
+  outline: none;
+  border: 0;
+}
+
+span {
+  cursor: pointer;
+}
+
+mat-toolbar-row > div > button:hover {
+  transform: scale(1.2);
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+mat-toolbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.login-button:hover {
+  transform: scale(1.2);
+}

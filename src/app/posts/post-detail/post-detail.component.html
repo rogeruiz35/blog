@@ -1,0 +1,48 @@
+<ng-container *ngIf="post">
+
+  <!-- CARD DETAIL VIEW: -->
+  <div [hidden]="editing">
+    <mat-card>
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+
+      <p>
+        <small class="text-color-post-header">Publicado por {{ post.author }} &bull;
+          {{ post.published.toDate() | date: 'short' }}</small>
+      </p>
+
+      <h2 class="text-color-post-header">{{ post.title }}</h2>
+
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+
+      <!-- EDIT & DELETE CARD BUTTONS -->
+      <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
+        <button mat-icon-button class="edit-icon-color" (click)="editing=true">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-icon-color" (click)="delete()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- CARD EDITING VIEW: -->
+  <div [hidden]="!editing">
+    <mat-card>
+      <h2 class="edit-post-card-title">Editar Post</h2>
+      <mat-form-field>
+        <input matInput placeholder="Título del Post" [(ngModel)]="post.title">
+      </mat-form-field> <br>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Contenido del Post" [(ngModel)]="post.content" rows="10"></textarea>
+      </mat-form-field>
+      <br>
+
+      <button class="scale-button" mat-raised-button color="accent" (click)="updatePost()">Guardar</button>
+      <button class="scale-button" mat-stroked-button (click)="editing=false" *ngIf="editing">Cancelar</button>
+    </mat-card>
+  </div>
+</ng-container>

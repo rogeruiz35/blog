@@ -1,0 +1,77 @@
+mat-card {
+  margin: 80px auto;
+  max-width: 570px;
+  border: 1px solid transparent;
+  color: black;
+  background: rgb(252, 252, 252);
+}
+
+mat-card:hover {
+  cursor: context-menu;
+}
+
+mat-card-content {
+  overflow: auto;
+  height: 150px;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+}
+
+max-form-field {
+  width: 100%;
+}
+
+.edit-icon-color:hover {
+  transform: scale(1.5);
+  color: #673ab7;
+}
+
+.delete-icon-color:hover {
+  transform: scale(1.5);
+  color: #f44336;
+}
+
+mat-card-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+mat-card-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+mat-card-content::-webkit-scrollbar-thumb {
+  background-color: #673ab7;
+  border-radius: 5px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #673ab7;
+  border-radius: 5px;
+}
+
+.text-color-post-header {
+  color: #673ab7;
+}
+
+.edit-post-card-title {
+  color: #673ab7;
+}
+
+.scale-button:hover {
+  transform: scale(1.2);
+}
