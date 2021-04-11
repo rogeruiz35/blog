@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   // firebase: {
   //   apiKey: "AIzaSyA5Uv2BXG1IRb5W8lBPHQ6tYZ80QHvR_SI",
   //   authDomain: "ng-blog-8bfca.firebaseapp.com",
@@ -22,15 +22,15 @@ export const environment = {
   //   appId: "1:485413339837:web:df9e9375ea1b97181e2dd4",
   //   measurementId: "G-4NR0L6VBQN"
   // }
-  firebase: {
-    apiKey: "AIzaSyAcMwIQRG5yXUDQ600Af-yJX7RMIn-3mLw",
-    authDomain: "prueba-12f4e.firebaseapp.com",
-    projectId: "prueba-12f4e",
-    storageBucket: "prueba-12f4e.appspot.com",
-    messagingSenderId: "211768301339",
-    appId: "1:211768301339:web:13b0eb13e98ef063c5a5be",
-    measurementId: "G-L07PFZ22G8"
-  }
+  // firebase: {
+  //   apiKey: "AIzaSyAcMwIQRG5yXUDQ600Af-yJX7RMIn-3mLw",
+  //   authDomain: "prueba-12f4e.firebaseapp.com",
+  //   projectId: "prueba-12f4e",
+  //   storageBucket: "prueba-12f4e.appspot.com",
+  //   messagingSenderId: "211768301339",
+  //   appId: "1:211768301339:web:13b0eb13e98ef063c5a5be",
+  //   measurementId: "G-L07PFZ22G8"
+  // }
 };
 
 /*
