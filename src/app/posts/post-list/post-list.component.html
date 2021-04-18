@@ -1,8 +1,10 @@
 <section>
   <mat-card mat-stroked-card="primary" *ngFor="let post of posts | async">
-    <mat-card-content routerLink="{{ post.id }}">
+    <mat-card-content matTooltip="{{ post.title }}" [matTooltipPosition]="position.value" routerLink="{{ post.id }}">
       <img src="{{ post.image }}" alt="{{ post.title }}">
-      <h2>{{ post.title }}</h2>
+      <h2 class="text-overflow-hidden">
+        {{ post.title }}
+      </h2>
       <p>
         <small>Publicado por {{ post.author }} &bull; {{ post.published.toDate() | date: 'short' }}</small>
       </p>

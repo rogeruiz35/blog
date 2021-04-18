@@ -1,16 +1,20 @@
 <ng-container *ngIf="post">
 
   <!-- CARD DETAIL VIEW: -->
-  <div [hidden]="editing">
-    <mat-card>
-      <img src="{{ post.image }}" alt="{{ post.title }}">
+  <div class="" [hidden]="editing" style="background: url('{{ post.image }}'); background-size: cover; opacity: 1">
+    <mat-card matTooltip="{{ post.title }}">
+      <!-- <img src="{{ post.image }}" alt="{{ post.title }}"> -->
+
+      <mat-card-title>{{ post.title }}</mat-card-title>
+
+      <img src="{{ post.image }}" alt="{{ post.title }}">{{ post.title }}
 
       <p>
         <small class="text-color-post-header">Publicado por {{ post.author }} &bull;
           {{ post.published.toDate() | date: 'short' }}</small>
       </p>
 
-      <h2 class="text-color-post-header">{{ post.title }}</h2>
+      <!-- <h2 class="text-color-post-header text-overflow-hidden">{{ post.title }}</h2> -->
 
       <mat-card-content>
         <p>{{ post.content }}</p>

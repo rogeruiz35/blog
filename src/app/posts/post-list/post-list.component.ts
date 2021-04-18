@@ -5,6 +5,9 @@ import { Post } from '../post';
 import { PostService } from '../post.service';
 import { AuthService } from '../../core/auth.service';
 
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -12,6 +15,9 @@ import { AuthService } from '../../core/auth.service';
 })
 export class PostListComponent implements OnInit {
   posts: Observable<Post[]>;
+
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[1]);
 
   constructor(
     private postService: PostService,

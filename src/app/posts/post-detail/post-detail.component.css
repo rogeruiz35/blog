@@ -3,11 +3,13 @@ mat-card {
   max-width: 570px;
   border: 1px solid transparent;
   color: black;
-  background: rgb(252, 252, 252);
+  /* background: rgb(252, 252, 252); */
+  background: rgba(255, 255, 255, 0.521);
 }
 
 mat-card:hover {
   cursor: context-menu;
+  opacity: 1;
 }
 
 mat-card-content {
@@ -18,6 +20,13 @@ mat-card-content {
 img {
   width: 100%;
   height: 400px;
+  /* display: none; */
+
+  opacity: 0.3;
+}
+
+img:hover {
+  opacity: 1;
 }
 
 max-form-field {
@@ -47,6 +56,10 @@ mat-card-content::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+mat-card-content {
+  color: rgb(0, 0, 0);
+}
+
 mat-form-field {
   width: 100%;
 }
@@ -65,13 +78,30 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .text-color-post-header {
-  color: #673ab7;
+  /* color: #673ab7; */
+  color: rgba(0, 0, 0, 0.842);
 }
 
 .edit-post-card-title {
-  color: #673ab7;
+  /* color: #673ab7; */
+  color: rgba(0, 0, 0, 0.842);
 }
 
 .scale-button:hover {
   transform: scale(1.2);
+}
+
+.page-background {
+  /* background-image: url("../../../assets/images/clouds2.jpg"); */
+  background: url('https://firebasestorage.googleapis.com/v0/b/prueba-12f4e.appspot.com/o/posts%2FTonys-haptic-computer-interface.png?alt=media&token=31191b85-57ae-4ad8-85fb-b734a0d55c71') no-repeat bottom;
+
+  background-size: cover;
+}
+
+.text-overflow-hidden {
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
